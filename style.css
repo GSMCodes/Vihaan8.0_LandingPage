@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+  }
+  
+  #left {
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+    color: #fff;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .info h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .tagline {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #dbeafe;
+    text-align: center;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 90%;
+    color: #e0f2fe;
+    margin-top: 100px;
+  }
+  
+  .start-btn {
+    position: absolute;
+    bottom: 40px;
+    left: 60px;
+    padding: 12px 30px;
+    background-color: #ffffff;
+    color: #1e3c72;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    z-index: 2;
+  }
+  
+  .start-btn:hover {
+    background-color: #1e3c72;
+    color: #ffffff;
+    transform: scale(1.05);
+  }  
+  
+  #right {
+    width: 55%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #right iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* Search bar styles */
+  .search-wrapper {
+    position: absolute;
+    top: 20px;
+    left: 120px;
+    right: auto;
+    z-index: 10;
+    transition: all 0.5s ease;
+    width: 60%;
+  }
+  
+  .search-wrapper input {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    transition: all 0.4s ease;
+  }
+  
+  /* When input is focused: expand over both sides */
+  .search-wrapper:focus-within {
+    width: 90vw;
+    left: 5vw;
+    right: 5vw;
+  }
+  
+  .search-wrapper:focus-within input {
+    font-size: 18px;
+    padding: 15px 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
